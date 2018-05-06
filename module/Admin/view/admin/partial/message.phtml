@@ -1,0 +1,46 @@
+<?php if ($msgError) {?>
+<div class="alert alert-danger alert-dismissible fade in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+    </button>
+    <?php echo $msgError;?>
+</div>
+<?php }?>
+
+<button type="button" id="btn_message_confirm_modal" class="btn btn-primary" data-toggle="modal" data-target=".message-confirm-modal" style="display: none"></button>
+<div class="modal fade message-confirm-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel2">Thông báo</h4>
+            </div>
+            <div class="modal-body" id="message_confirm_body_modal"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn_message_confirm_modal_action">Thực hiện</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<button type="button" id="btn_message_modal" class="btn btn-primary" data-toggle="modal" data-target=".message-modal" style="display: none"></button>
+<div class="modal fade message-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel2">Thông báo</h4>
+            </div>
+            <div class="modal-body" id="message_body_modal"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
+            </div>
+
+        </div>
+    </div>
+</div>

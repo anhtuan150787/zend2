@@ -1,0 +1,48 @@
+<form name="" id="frm_table" action="<?php echo $this->url('admin/default', ['controller' => $module]); ?>"
+      method="post">
+    <div class="x_panel">
+
+        <?php echo $this->partial('admin/partial/table_title', ['moduleName' => $moduleName, 'module' => $module]); ?>
+
+        <div class="x_content">
+            <div class="table-responsive">
+                <div class="table-responsive">
+                    <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                        <tr class="headings">
+                            <th>
+                                <input type="checkbox" id="check-all" class="flat">
+                            </th>
+                            <th class="column-title">Menu</th>
+                            <th class="column-title">URL</th>
+                            <th class="column-title">Trạng thái</th>
+                            <th class="column-title">Chức năng</th>
+                            <th class="bulk-actions" colspan="7">
+                                <a id="btn_del_list" href="javascript:void(0);"  class="antoo btn btn-danger btn-xs" style="color:#fff; font-weight:500; cursor: pointer; margin-bottom: 0">Xóa đã chọn <i class="fa fa-trash-o"></i></a>
+                            </th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <?php foreach ($records as $record) { ?>
+                            <tr class="even pointer">
+                                <td class="a-center ">
+                                    <input type="checkbox" class="flat" name="table_records" value="<?php echo $record['menu_id'];?>">
+                                </td>
+                                <td><?php echo '<a href="' . $this->url('admin/default', array('controller' => $module, 'action' => 'edit'), array('query' => array('id' => $record['menu_id']))) . '">' . str_repeat('__', $record['menu_level']) . ' <strong>' . $record['menu_name'] . '</strong>' . '</a>'; ?></td>
+                                <td><?php echo $this->escapeHtml($record['menu_url']); ?></td>
+                                <td><?php echo $status[$record['menu_status']]; ?></td>
+                                <td>
+                                    <a href="<?php echo $this->url('admin/default', array('controller' => $module ,'action' => 'edit'), array('query' => array('id' => $record['menu_id']))); ?>" class="btn btn-info btn-xs btn-edit"><i class="fa fa-pencil"></i> Cập nhật </a>
+
+                                    <a  href="javascript:void(0)" onclick="showConfirm('deleteItem', this)" data-href="<?php echo $this->url('admin/default', array('controller' => $module, 'action' => 'delete'), array('query' => array('id' => $record['menu_id']))); ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa </a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</form>

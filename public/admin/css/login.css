@@ -1,0 +1,6 @@
+div.captcha img {float: right; cursor: pointer;}
+input.captcha-input {width: 160px !important;}
+div.captcha ul {display: none}
+
+.login_form .item {position: relative}
+.login_form .item .alert{position: absolute !important; top: 0; left: 310px;}

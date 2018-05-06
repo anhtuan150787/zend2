@@ -1,0 +1,27 @@
+2018-05-06T14:32:14+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36		GET	http://zend2/quan-tri/login/index
+2018-05-06T14:35:38+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36		GET	http://zend2/public/admin/	Statement could not be executed (42000 - 1064 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND group_menu_status = 1
+                        AND menu_parent = 0' at line 2)
+#0 D:\www\zend2\module\Application\src\Application\Model\Builder.php(90): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 D:\www\zend2\module\Application\src\Application\Model\Builder.php(47): Application\Model\Builder->getFetch('SELECT *  FROM ...')
+#2 D:\www\zend2\module\Application\src\Application\Model\GroupMenu.php(35): Application\Model\Builder->fetchWhere(Array)
+#3 D:\www\zend2\module\Application\src\Application\Model\GroupMenu.php(22): Application\Model\GroupMenu->getGroupMenuList(NULL, 0, -1, Array)
+#4 D:\www\zend2\module\Admin\src\Admin\Controller\MainController.php(38): Application\Model\GroupMenu->getGroupMenu(NULL)
+#5 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#6 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#7 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#10 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#11 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#12 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#14 D:\www\zend2\public\index.php(17): Zend\Mvc\Application->run()
+#15 {main}
+2018-05-06T14:35:41+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/public/admin/login/index	GET	http://zend2/favicon.ico
+2018-05-06T14:35:49+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/public/admin/index/index	GET	http://zend2/public/admin/vendors/tinymce/tinymce.min.js
+2018-05-06T14:35:50+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/public/admin/index/index	GET	http://zend2/public/admin/index/images/favicon.ico
+2018-05-06T14:35:54+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/admin/menu/index	GET	http://zend2/admin/vendors/tinymce/tinymce.min.js
+2018-05-06T14:35:55+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/admin/menu/index	GET	http://zend2/admin/menu/images/favicon.ico
+2018-05-06T14:36:22+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/admin/menu/index	GET	http://zend2/admin/vendors/tinymce/tinymce.min.js
+2018-05-06T14:37:21+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/admin/menu/index	GET	http://zend2/admin/vendors/tinymce/tinymce.min.js
+2018-05-06T14:37:30+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/admin/menu/index	GET	http://zend2/admin/vendors/tinymce/tinymce.min.js

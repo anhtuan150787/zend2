@@ -1,0 +1,29 @@
+<div class="animate form login_form x_panel">
+    <section class="login_content">
+        <?php
+        $form->setAttribute('novalidate', '');
+        $form->prepare();
+        echo $this->form()->openTag($form);
+        ?>
+        <h1>Đăng nhập</h1>
+
+        <?php echo $this->partial('admin/partial/message', ['msgError' => $msgError]); ?>
+
+        <div class="item form-group">
+            <?php echo $this->formElement($form->get('account_username')); ?>
+        </div>
+        <div class="item form-group">
+            <?php echo $this->formElement($form->get('account_password')); ?>
+        </div>
+        <div class="item form-group captcha">
+            <?php echo $this->formRow($form->get('Captcha'));?>
+        </div>
+        <div>
+            <?php echo $this->formSubmit($form->get('account_submit')); ?>
+            <?php echo $this->formHidden($form->get('csrf')); ?>
+        </div>
+        <div class="clearfix"></div>
+        <?php echo $this->form()->closeTag(); ?>
+    </section>
+</div>
+

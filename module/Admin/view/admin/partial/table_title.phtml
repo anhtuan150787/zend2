@@ -1,0 +1,16 @@
+<div class="x_title">
+    <h2><?php echo $moduleName; ?></h2>
+
+    <?php echo $this->partial('admin/partial/message', ['msgError' => $msgError]); ?>
+
+    <ul class="nav navbar-right panel_toolbox">
+        <li>
+            <a href="<?php echo $this->url('admin/default', ['controller' => $module, 'action' => 'add']); ?>">
+                <button type="button" class="btn btn-success">
+                    <i class="fa fa-plus-square-o"> &nbsp;Thêm mới</i>
+                </button>
+            </a>
+        </li>
+    </ul>
+    <div class="clearfix"></div>
+</div>

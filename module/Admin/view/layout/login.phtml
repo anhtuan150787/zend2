@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CMS</title>
+
+<?php echo $this->headLink()
+        ->prependStylesheet($this->basePath('admin/css/login.css'))
+        ->prependStylesheet($this->basePath('admin/build/css/custom.min.css'))
+        ->prependStylesheet($this->basePath('admin/vendors/animate.css/animate.min.css'))
+        ->prependStylesheet($this->basePath('admin/vendors/nprogress/nprogress.css'))
+        ->prependStylesheet($this->basePath('admin/vendors/font-awesome/css/font-awesome.min.css'))
+        ->prependStylesheet($this->basePath('admin/vendors/bootstrap/dist/css/bootstrap.min.css'))
+?>
+</head>
+
+<body class="login">
+<div>
+    <div class="login_wrapper">
+        <?php echo $this->content;?>
+    </div>
+</div>
+
+<?php
+echo $this->inlineScript()
+    ->prependFile($this->basePath('admin/js/scripts.js'))
+    ->prependFile($this->basePath('admin/build/js/custom.min.js'))
+    ->prependFile($this->basePath('admin/vendors/validator/validator-lang.js'))
+    ->prependFile($this->basePath('admin/vendors/validator/validator.js'))
+    ->prependFile($this->basePath('admin/vendors/bootstrap/dist/js/bootstrap.min.js'))
+    ->prependFile($this->basePath('admin/vendors/jquery/dist/jquery.min.js'))
+?>
+
+</body>
+</html>

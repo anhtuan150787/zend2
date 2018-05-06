@@ -1,0 +1,17 @@
+2018-04-27T16:54:13+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/quan-tri/login/index	GET	http://zend2/favicon.ico
+2018-04-27T16:57:56+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36	http://zend2/quan-tri/login/index	POST	http://zend2/quan-tri/login/index	A value for the identity was not provided prior to authentication with DbTable.
+#0 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Authentication\Adapter\DbTable\AbstractAdapter.php(232): Zend\Authentication\Adapter\DbTable\AbstractAdapter->authenticateSetup()
+#1 D:\www\zend2\module\Admin\src\Admin\Controller\LoginController.php(60): Zend\Authentication\Adapter\DbTable\AbstractAdapter->authenticate()
+#2 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\LoginController->indexAction()
+#3 D:\www\zend2\module\Admin\src\Admin\Controller\LoginController.php(26): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 [internal function]: Admin\Controller\LoginController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#5 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#6 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#9 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#10 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#11 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 D:\www\zend2\public\index.php(17): Zend\Mvc\Application->run()
+#14 {main}
